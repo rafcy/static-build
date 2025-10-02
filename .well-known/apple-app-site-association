@@ -3,16 +3,9 @@
     "apps": [],
     "details": [
       {
-        "appID": "4VXR43682F.com.tamimi.tmarkets",
-        "paths": [
-          "*"
-        ]
+        "appID": "4VXR43682F.com.tamimi.markets",
+        "paths": ["*"]
       }
-    ]
-  },
-  "webcredentials": {
-    "apps": [
-      "4VXR43682F.com.tamimi.tmarkets"
     ]
   }
 }
