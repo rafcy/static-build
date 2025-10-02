@@ -3,26 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deep Link Tester</title>
+    
+    <!-- iOS Smart App Banner - shows "Open in App" or "View in App Store" -->
+    <meta name="apple-itunes-app" content="app-id=916687172, app-argument=https://yourdomain.com/tabs/tab-home">
+    
+    <title>Tamimi Rewards</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 600px;
-            margin: 50px auto;
+            margin: 0;
             padding: 20px;
+            background: #f5f5f5;
         }
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            color: #333;
-        }
+        h1 { font-size: 24px; margin-bottom: 20px; text-align: center; }
+        .section { margin-bottom: 30px; }
+        .section h2 { font-size: 18px; margin-bottom: 10px; color: #333; }
         a {
             display: block;
             padding: 12px;
@@ -33,58 +36,132 @@
             border-radius: 4px;
             text-align: center;
         }
-        a:hover {
-            background: #0056b3;
+        a:hover { background: #0056b3; }
+        #deeplink-page {
+            text-align: center;
+            display: none;
+        }
+        #path {
+            background: #f0f0f0;
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-family: monospace;
+            word-break: break-all;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            margin: 10px 5px;
+            background: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .btn:hover { background: #0056b3; }
+        .note {
+            margin-top: 20px;
+            padding: 15px;
+            background: #e3f2fd;
+            border-radius: 4px;
+            font-size: 14px;
         }
     </style>
 </head>
 <body>
-    <h1>Deep Link Tester</h1>
+    <!-- Home page with buttons -->
+    <div id="home-page">
+        <div class="container">
+            <h1>Deep Link Tester</h1>
 
-    <div class="section">
-        <h2>Home</h2>
-        <a href="/tabs/tab-home">Home</a>
-        <a href="/tabs/tab-home/information">Information</a>
-        <a href="/tabs/tab-home/coupon">Coupon</a>
-        <a href="/tabs/tab-home/notifications">Notifications</a>
-        <a href="/tabs/tab-home/notifications/notification">Notification Detail</a>
-        <a href="/tabs/tab-home/redeem">Redeem</a>
+            <div class="section">
+                <h2>Home</h2>
+                <a href="/tabs/tab-home">Home</a>
+                <a href="/tabs/tab-home/information">Information</a>
+                <a href="/tabs/tab-home/coupon">Coupon</a>
+                <a href="/tabs/tab-home/notifications">Notifications</a>
+                <a href="/tabs/tab-home/redeem">Redeem</a>
+            </div>
+
+            <div class="section">
+                <h2>Stores</h2>
+                <a href="/tabs/tab-stores">Stores Map</a>
+            </div>
+
+            <div class="section">
+                <h2>Services</h2>
+                <a href="/tabs/tab-services">Services</a>
+                <a href="/tabs/tab-services/price-checker">Price Checker</a>
+                <a href="/tabs/tab-services/kids-loyalty">Kids Loyalty</a>
+                <a href="/tabs/tab-services/shopping-list">Shopping List</a>
+            </div>
+
+            <div class="section">
+                <h2>Offers</h2>
+                <a href="/tabs/tab-offers">Offers</a>
+            </div>
+
+            <div class="section">
+                <h2>Account</h2>
+                <a href="/tabs/tab-account">Account</a>
+                <a href="/tabs/tab-account/profile">Profile</a>
+                <a href="/tabs/tab-account/account-settings">Settings</a>
+            </div>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>Stores</h2>
-        <a href="/tabs/tab-stores">Stores Map</a>
+    <!-- Deep link page -->
+    <div id="deeplink-page">
+        <div class="container">
+            <h1>📱 Open in Tamimi Rewards</h1>
+            <p>This link should open in the app:</p>
+            <div id="path"></div>
+            
+            <div class="note">
+                <strong>iOS Safari:</strong> Look for the banner at the top of the page and tap "Open" or "View"
+                <br><br>
+                <strong>Other browsers:</strong> Deep links may not work. Please open this link in Safari (iOS) or Chrome (Android).
+            </div>
+
+            <div style="margin-top: 20px;">
+                <p><strong>App not installed?</strong></p>
+                <a href="https://apps.apple.com/us/app/tamimi-rewards-%D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC-%D8%AB%D9%85%D8%A7%D8%B1%D9%8A/id916687172" class="btn">
+                    📱 App Store
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.tamimi.tmarkets" class="btn">
+                    🤖 Google Play
+                </a>
+            </div>
+            
+            <p style="margin-top: 20px;">
+                <a href="/">← Back to Home</a>
+            </p>
+        </div>
     </div>
 
-    <div class="section">
-        <h2>Services</h2>
-        <a href="/tabs/tab-services">Services</a>
-        <a href="/tabs/tab-services/price-checker">Price Checker</a>
-        <a href="/tabs/tab-services/kids-loyalty">Kids Loyalty</a>
-        <a href="/tabs/tab-services/kids-loyalty/edit-kid">Edit Kid</a>
-        <a href="/tabs/tab-services/kids-loyalty/add-kid">Add Kid</a>
-        <a href="/tabs/tab-services/giftcard-balance">Gift Card Balance</a>
-        <a href="/tabs/tab-services/missed-points">Missed Points</a>
-        <a href="/tabs/tab-services/raincheck">Rain Check</a>
-        <a href="/tabs/tab-services/raincheck/raincheck-conditions">Rain Check Conditions</a>
-        <a href="/tabs/tab-services/shopping-list">Shopping List</a>
-        <a href="/tabs/tab-services/shopping-list/create-list">Create List</a>
-        <a href="/tabs/tab-services/shopping-list/basket-list">Basket List</a>
-        <a href="/tabs/tab-services/shopping-list/basket-list/create-item">Create Item</a>
-    </div>
-
-    <div class="section">
-        <h2>Offers</h2>
-        <a href="/tabs/tab-offers">Offers</a>
-    </div>
-
-    <div class="section">
-        <h2>Account</h2>
-        <a href="/tabs/tab-account">Account</a>
-        <a href="/tabs/tab-account/account-settings">Account Settings</a>
-        <a href="/tabs/tab-account/language">Language</a>
-        <a href="/tabs/tab-account/profile">Profile</a>
-        <a href="/tabs/tab-account/communication-preference">Communication Preferences</a>
-    </div>
+    <script>
+        const APP_ID = "916687172";
+        
+        const path = window.location.pathname;
+        const fullURL = window.location.href;
+        
+        // Update Smart App Banner meta tag dynamically with current URL
+        const metaTag = document.querySelector('meta[name="apple-itunes-app"]');
+        if (metaTag && path !== '/') {
+            metaTag.setAttribute('content', `app-id=${APP_ID}, app-argument=${fullURL}`);
+        }
+        
+        // Show appropriate page based on path
+        if (path === '/' || path === '/index.html') {
+            document.getElementById('home-page').style.display = 'block';
+            document.getElementById('deeplink-page').style.display = 'none';
+        } else {
+            document.getElementById('home-page').style.display = 'none';
+            document.getElementById('deeplink-page').style.display = 'block';
+            
+            // Show the path
+            document.getElementById('path').textContent = path;
+        }
+    </script>
 </body>
 </html>
