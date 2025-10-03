@@ -1,5 +1,12 @@
-[{
-  "relation": ["delegate_permission/common.handle_all_urls"],
-  "target" : { "namespace": "android_app", "package_name": "themari.tamimi.markets",
-               "sha256_cert_fingerprints": ["E7:94:1C:0D:6A:DF:CA:7F:A5:5E:14:14:45:D0:38:15:77:20:2C:4F:E5:92:71:07:2B:C6:6B:0C:EC:2E:BC:88"] }
-}]
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.tamimi.markets",
+      "sha256_cert_fingerprints": [
+        "E7:94:1C:0D:6A:DF:CA:7F:A5:5E:14:14:45:D0:38:15:77:20:2C:4F:E5:92:71:07:2B:C6:6B:0C:EC:2E:BC:88"
+      ]
+    }
+  }
+]
